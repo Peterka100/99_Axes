@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/Peterka100/99_Axes/issues"
   },
-  "homepage": "https://github.com/Peterka100/99_Axes#readme"
+  "homepage": "https://github.com/Peterka100/99_Axes#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  }
 }
