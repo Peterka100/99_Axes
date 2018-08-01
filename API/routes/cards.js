@@ -17,7 +17,6 @@ router.get('/:card_id/:card_level', function (req, res, next) {
     };
 
     res.status(200).json({
-        message: 'Máme info zavolat tabulku CARDS',
         cardDetail: cardDetail
     });
 });

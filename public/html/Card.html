@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Game</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="../css/game.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/game.css" rel="stylesheet" type="text/css">
     </head>
 <body>
 
@@ -21,27 +21,22 @@
 
         <div class="col-sm-3 col-md-3" >
             <div style="border:1px solid #cecece; border-radius: 25px" id="odstup">
-                <img src="../src/Axe2.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
+                <img src="../public/src/Axe2.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
                 <div id="name" style="text-align: center; font-size: 25px; font-weight: bold; margin-top: 15px"> Super axe </div>
                 <div id="level" style="text-align: center"> Level 4 </div>
 
-                <div> Energy: <span id="energy"></span> </div>
-                <div> Resource: <span id="resource"></span> </div>
-                <br>
-                <div style="font-weight: bold"> Next level  </div>
-                <div style="font-size: 13px"> Resource: <span id="resource"></span> </div>
-                <div style="font-size: 13px"> Energy: <span id="energy"></span> </div>
-                <div style="font-size: 13px"> Resource: <span id="resource"></span> </div>
-                <br>
+
+                <div> Resource: <span id="vysledek"></span> </div>
+
                 <p>
-                    <button type="button" class="btn btn-default btn-md btn-block"> Update </button>
+                    <button  id="cardDetail" onclick="cardDetails()" type="button" class="btn btn-default btn-md btn-block"> UpdateX </button>
                 </p>
             </div>
         </div>
 
         <div class="col-sm-3 col-md-3" >
             <div style="border:1px solid #cecece; border-radius: 25px" id="odstup">
-                <img src="../src/Axe3.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
+                <img src="../public/src/Axe3.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
                 <div id="name" style="text-align: center; font-size: 25px; font-weight: bold; margin-top: 15px"> Greatest axe </div>
                 <div id="level" style="text-align: center"> Level 4 </div>
 
@@ -61,7 +56,7 @@
 
         <div class="col-sm-3 col-md-3" >
             <div style="border:1px solid #cecece; border-radius: 25px" id="odstup">
-                <img src="../src/Axe1.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
+                <img src="../public/src/Axe1.png" alt="Picture for lvl 1-5" class="rounded mx-auto d-block" style="width: auto; height: 100px">
                 <div id="name" style="text-align: center; font-size: 25px; font-weight: bold; margin-top: 15px"> Axe template </div>
                 <div id="level" style="text-align: center"> Level ... </div>
 
@@ -83,49 +78,13 @@
 
 </section>
 
-<!-- Partials, řeším v server.js-->
+<!-- Partials -->
 {{> footer }}
 
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.js"></script>
-<script src="../js/PageActions.js"></script>
 
+<script src="../public/js/html.js"> </script>
+<script src="../public/js/jquery.js"></script>
 
 </body>
 </html>
 
-
-<!-- NEVYUZITY, ALE FUNKCNI BUTTON DROPDOWN - VÝBER HODNOTY
-   <div class="input-group my-2 my-lg-0">
-       <div class="input-group-btn btn-group">
-           <button type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-               Choose a player <span class="caret"></span>
-           </button>
-           <ul class="dropdown-menu" role="menu">
-               <li><a href="#">Choose a player</a></li>
-               <li><a href="#">Peter</a></li>
-               <li><a href="#">Richard</a></li>
-           </ul>
-       </div>
-
-       <button class="btn btn-outline-success my-2 my-sm-0" type="button">Login</button>
-
-   </div>
-  -->
-
-<!-- NEVYUZITY, ALE FUNKCNI DROPDOWN - POSUNUTY HEZKY VPRAVO
-
-<form class="form-inline my-2 my-lg-0">
-    <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Choose a player
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Peter</a>
-            <a class="dropdown-item" href="#">Richard</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">List of players</a>
-        </div>
-    </div>
- </form>
- -->

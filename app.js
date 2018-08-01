@@ -17,10 +17,10 @@ module.exports = app;
 //HANDLEBARS VIEW ENGINE SETUP - NASTAVENI HANDLEBARS
 // ------------------------------------------------------------------------------------------
 app.set('view engine', 'html'); // nastavení view engine
-app.set('views', path.join(__dirname, 'html'));
+app.set('views', path.join(__dirname, '/public/html'));
 app.engine('html', hbs.__express);
 
-hbs.registerPartials(__dirname + '/html/partials');
+hbs.registerPartials(__dirname + '/public/html/partials');
 
 
 
@@ -30,4 +30,5 @@ app.use(express.static(__dirname ));
 
 app.get('/', function (req, res) {
     res.render('Card.html');
+
 });
