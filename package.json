@@ -21,9 +21,11 @@
   },
   "homepage": "https://github.com/Peterka100/99_Axes#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "http": "0.0.0",
+    "morgan": "^1.9.0",
     "path": "^0.12.7"
   }
 }
