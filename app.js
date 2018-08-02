@@ -4,6 +4,7 @@ const path = require('path');
 const hbs = require('hbs');        // Handlebars
 const morgan = require('morgan');  // Logovací Middleware, který loguje, jak dlouho trval request
 const bodyParser = require('body-parser');
+const mysql = require('mysql');
 
 // Zapnutí logovacího middlewaru - všechny requesty jdou přes Morgan middleware
 //----------------------------------------------------------------------------------
@@ -35,7 +36,12 @@ const cardsRoutes = require('./API/routes/cards');    // nastavujem jenom cestu 
 app.use('/users', usersRoutes);
 app.use('/cards', cardsRoutes);
 
-
+/*
+// Connection to database - připojení k DB
+//------------------------------------------------------------------------------------------
+const DBmethods = require('./DBmethods');
+DBmethods.doconnect();  // připojí se k DB
+*/
 
 //Definice Homepage
 //-------------------------------------------------------------------------------------------
@@ -67,7 +73,6 @@ app.use(function (error, req, res, next) {
 });
 
 
-module.exports = app;
 
 
 //HANDLEBARS VIEW ENGINE SETUP - NASTAVENI HANDLEBARS
@@ -79,4 +84,4 @@ app.engine('html', hbs.__express);
 hbs.registerPartials(__dirname + '/public/html/partials');
 
 
-
+module.exports = app;

@@ -2,7 +2,7 @@
 
 function cardDetails(card_id, card_level) {
     $.ajax({
-        url: "http://127.0.0.1:5000/cards/" + card_id + "/" +  card_level
+        url: "http://localhost:5000/cards/" + card_id + "/" +  card_level
     }).then(function(data) {
         $('#card_level').text(data.cardDetail.card_level);
         $('#iron').text(data.cardDetail.iron);

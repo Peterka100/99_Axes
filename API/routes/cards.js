@@ -13,7 +13,7 @@ router.get('/:card_id/:card_level', function (req, res, next) {
         card_id: req.params.card_id,
         card_level: req.params.card_level,
         iron: 1000,
-        wood: 2000
+        wood: 3000
     };
 
     res.status(200).json({
