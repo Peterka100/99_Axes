@@ -31,10 +31,12 @@ app.use(function (req, res, next) {
 // Import routes - řeš9 všechny requesty
 //--------------------------------------------------------------------------------------
 const usersRoutes = require('./API/routes/users');          // nastavujem jenom cestu k souboru cards.js
-const cardsRoutes = require('./API/routes/cards');    // nastavujem jenom cestu k souboru cards.js
+const cardsRoutes = require('./API/routes/cards');
+const authRoutes = require('./API/routes/authentification');// nastavujem jenom cestu k souboru cards.js
 
 app.use('/users', usersRoutes);
 app.use('/cards', cardsRoutes);
+app.use('/auth', authRoutes);
 
 /*
 // Connection to database - připojení k DB
