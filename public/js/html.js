@@ -10,6 +10,15 @@ function cardDetails(card_id, card_level) {
     });
 };
 
+function register() {
+    $.ajax({
+        url: "http://localhost:5000/auth/signup"
+    }).then(function(data) {
+        $('#card_level').text(data.cardDetail.card_level);
+        $('#iron').text(data.cardDetail.iron);
+        $('#wood').text(data.cardDetail.wood);
+    });
+};
 
 /*
 function cardDetails() {

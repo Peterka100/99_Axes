@@ -14,17 +14,20 @@ router.post("/signup", function (req, res, next) {
                 error: err
             });
         } else {
-            console.log(hash)
             // ZDE udělat zápis do databáze - zapisujeme hash
+            const user = ({
+
+                username: req.body.username,
+                password: hash,
+                nickname: req.body.username
+            });
+
+            console.log(user);
+            // ZDE udělat zápis do databáze
         }
 
-    const user = ({
-            // _id: new - how to add new ID? Musím, nemůže databáze?
-            nickname: req.body.nickname,
-            username: req.body.username,
-            password: hash
-        });
 
+        /*
         user
             .save()
             .then(function (result) {
@@ -38,7 +41,7 @@ router.post("/signup", function (req, res, next) {
                     error: err
                 });
             })
-
+        */
     })
 });
 
@@ -46,6 +49,3 @@ router.post("/signup", function (req, res, next) {
 module.exports = router;
 
 
-bcrypt.hash(myPlaintextPassword, saltRounds, function(err, hash) {
-    // Store hash in your password DB.
-});

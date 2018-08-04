@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/game.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+<!--Zde používám trochu jinou hlavičku
+//--------------------------------------------------------------------------- -->
+
+<nav class="container navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 30px">
+    <a class="navbar-brand" href="#">G A M E</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ------------------------------------------------------------------------- -->
+
+<div class="container" id="loginpagecss">
+<form  method="post" action="/auth/signup">
+    <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username"  placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    </div>
+
+    <button id="register" type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</div>
+
+<!-- Partials, řeším v server.js-->
+{{> footer }}
+
+</body>
+</html>
