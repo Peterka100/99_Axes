@@ -5,6 +5,7 @@
     <title>Login page</title>
     <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="../public/css/game.css" rel="stylesheet" type="text/css">
+    <script src="../public/js/html.js"> </script>
 </head>
 <body>
 
@@ -29,8 +30,10 @@
 
 <!-- ------------------------------------------------------------------------- -->
 
+
+
 <div class="container" id="loginpagecss">
-<form  method="post" action="/auth/signup">
+<form  method="post"> <!--  action="/auth/signup" -->
     <div class="form-group">
         <label for="username">Username</label>
         <input type="text" class="form-control" id="username" name="username"  placeholder="Enter Username">
@@ -40,8 +43,9 @@
         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
     </div>
 
-    <button id="register" type="submit" class="btn btn-primary">Register</button>
-    <button type="submit" class="btn btn-primary">Login</button>
+
+    <button id="register" onclick="registerxxx();"  type="button" class="btn btn-primary" > Register </button>
+    <button formaction="/auth/signup" type="button" class="btn btn-primary"> Login </button>
 </form>
 </div>
 

@@ -59,6 +59,7 @@ app.get('/loginpage', function (req, res) {
 });
 
 
+
 //ERROR HANDLING - Mnou definovaný error - pro všechny věci, které hodí error v rámci funkce
 //-----------------------------------------------------------------------------------------
 app.use(function (req, res, next) {

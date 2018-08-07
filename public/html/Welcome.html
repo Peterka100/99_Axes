@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+    <link href="../public/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="../public/css/game.css" rel="stylesheet" type="text/css">
+</head>
+<body onload=test()>
+
+<script> function test () {
+    var urlParams = new URLSearchParams(window.location.search);
+    $('#jmeno').text(urlParams.toString());
+}
+</script>
+
+{{> header }}
+
+<div class="container">
+    Vitej <span id="jmeno"> </span>
+
+{{> footer }}
