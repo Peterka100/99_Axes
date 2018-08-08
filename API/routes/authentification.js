@@ -61,7 +61,6 @@ router.post("/signup", function (req, res, next) {
 //--------------------------------------------------------------------------------------------
 router.post("/login", function (req, res, next) {
 
-    console.log ('start');
     var connection = mysql.createConnection({
         host: 'localhost',
         user: 'peter',
@@ -76,12 +75,20 @@ router.post("/login", function (req, res, next) {
     });
 
     var user = req.body.username;
-    console.log(user);
+    console.log(connection.escape(user));
 
-    connection.query("SELECT EXISTS(SELECT * FROM users WHERE username = '" + conection.escape(req.body.username)+ "'", function (err, result) {
+    connection.query("SELECT EXISTS(SELECT 1 FROM users WHERE username = " +connection.escape(user) + ") AS vysledek", function (err, result) {
+        console.log('compare');
+        console.log(result[0].vysledek);
         if (err) {
             console.log(err);
+        } else if (result[0].vysledek < 1) {
+                console.log('1: else if');
+                return res.status(200).json({
+                    message: 'User not exist'
+                })
         } else {
+            console.log('2: else');
             res.status(200).json({
                 user: req.body.username
             })
