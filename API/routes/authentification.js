@@ -75,23 +75,69 @@ router.post("/login", function (req, res, next) {
     });
 
     var user = req.body.username;
-    console.log(connection.escape(user));
+
 
     connection.query("SELECT EXISTS(SELECT 1 FROM users WHERE username = " +connection.escape(user) + ") AS vysledek", function (err, result) {
-        console.log('compare');
         console.log(result[0].vysledek);
         if (err) {
             console.log(err);
         } else if (result[0].vysledek < 1) {
-                console.log('1: else if');
-                return res.status(200).json({
-                    message: 'User not exist'
+                console.log('Authorization failed');
+                return res.status(401).json({
+                    message: 'Authorization failed'
                 })
         } else {
-            console.log('2: else');
-            res.status(200).json({
-                user: req.body.username
+            console.log('Authorized');
+            connection.query("SELECT * FROM users WHERE username =  ?", [user], function(error, result, fields) {
+                if (result[0].password) {
+                    console.log('>>>>>> ', req.body.password);
+                    console.log('>>>>>> ', result[0].password);
+                    bcrypt.compare(req.body.password, result[0].password, function(err, ress) {
+                        if (ress) {
+                            console.log("heslo je OK");
+                            res.status(200).json({
+                                message: 'Spravne přihlasovací údaje'
+                            })
+                        } else
+                            res.status(401).json({
+                                message: 'Authorization failed'
+                            })
+                    })
+                }
             })
+            /*
+            connection.query("SELECT * FROM sometable WHERE username = ? ", [email], function(error, results, fields) {
+      if (results[0].password) {
+        bcrypt.compare(req.body.password, results[0].password, function(err, result) {
+         console.log('>>>>>> ', password)
+         console.log('>>>>>> ', results[0].password)
+         if(result) {
+           return res.send();
+         }
+         else {
+           return res.status(400).send();
+         }
+
+
+
+
+         bcrypt.compare(req.body.password, result[0].password, function(err, res) {
+                        if (err) {
+                            return res.status(401).json({
+                                message: 'Authorization failed'
+                            })
+                        }
+
+                        else {
+                            res.status(200).json({
+                                message: 'Heslo je OK'
+                            })
+                        }
+                    })
+
+
+             */
+
         }
     });
 });
