@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 
 
@@ -94,9 +95,19 @@ router.post("/login", function (req, res, next) {
                     console.log('>>>>>> ', result[0].password);
                     bcrypt.compare(req.body.password, result[0].password, function(err, ress) {
                         if (ress) {
-                            console.log("heslo je OK");
+                            const token = jwt.sign(
+                                {
+                                user: result[0].username,
+                                userID: result[0].user_id
+                                }, 'secret',
+                                {
+                                   expiresIn: "1h"
+                                });
+                            //console.log("heslo je OK");
+                            //console.log(result);
                             res.status(200).json({
-                                message: 'Spravne přihlasovací údaje'
+                                message: 'Spravne přihlasovací údaje',
+                                token: token
                             })
                         } else
                             res.status(401).json({
@@ -105,38 +116,6 @@ router.post("/login", function (req, res, next) {
                     })
                 }
             })
-            /*
-            connection.query("SELECT * FROM sometable WHERE username = ? ", [email], function(error, results, fields) {
-      if (results[0].password) {
-        bcrypt.compare(req.body.password, results[0].password, function(err, result) {
-         console.log('>>>>>> ', password)
-         console.log('>>>>>> ', results[0].password)
-         if(result) {
-           return res.send();
-         }
-         else {
-           return res.status(400).send();
-         }
-
-
-
-
-         bcrypt.compare(req.body.password, result[0].password, function(err, res) {
-                        if (err) {
-                            return res.status(401).json({
-                                message: 'Authorization failed'
-                            })
-                        }
-
-                        else {
-                            res.status(200).json({
-                                message: 'Heslo je OK'
-                            })
-                        }
-                    })
-
-
-             */
 
         }
     });
