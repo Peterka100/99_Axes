@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
+const checkAuth = require('../middleware/check-auth');
 // const dbmethods = require('./DBmethods')
 
 
 
 //Na zaklade uživatele zjistím, které karty má
 //-----------------------------------------------------------------------------------------------
-router.get('/:user_id', function (req, res) {
+router.get('/:user_id', checkAuth, function (req, res) {
     const userID = req.params.user_id;
     console.log(userID);
    // dbmethods.doconnect();  // připojí se k DB

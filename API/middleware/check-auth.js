@@ -1,0 +1,16 @@
+const jwt = require('jsonwebtoken');
+
+
+module.exports = function (req,res, next) {
+    try {
+        const decoded = jwt.verify(req.body.token, 'secret');
+        req.userData = decoded;
+        next();
+    } catch (error) {
+        return res.status(401).json({
+            message: 'No valid token'
+        })
+    }
+
+
+};
