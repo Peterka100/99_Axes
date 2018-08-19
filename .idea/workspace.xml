@@ -32,15 +32,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="html.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/html.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,11 +41,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="cards.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/routes/users.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+            <state relative-caret-position="17">
+              <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="authentification.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/API/routes/authentification.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -62,17 +71,8 @@
       <file leaf-file-name="check-auth.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/middleware/check-auth.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authentification.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/API/routes/authentification.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+            <state relative-caret-position="17">
+              <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -80,7 +80,7 @@
       <file leaf-file-name="Login.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/html/Login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
+            <state relative-caret-position="624">
               <caret line="47" column="91" selection-start-line="47" selection-start-column="91" selection-end-line="47" selection-end-column="91" />
             </state>
           </provider>
@@ -100,6 +100,7 @@
     <findStrings>
       <find>def</find>
       <find>dbmeth</find>
+      <find>userID</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,7 +118,6 @@
         <option value="$PROJECT_DIR$/public/html/Card.html" />
         <option value="$PROJECT_DIR$/public/html/partials/Single_card.html" />
         <option value="$PROJECT_DIR$/DBmethods.js" />
-        <option value="$PROJECT_DIR$/API/routes/cards.js" />
         <option value="$PROJECT_DIR$/API/routes/login.js" />
         <option value="$PROJECT_DIR$/public/html/partials/header.html" />
         <option value="$PROJECT_DIR$/public/html/partials/Welcome.html" />
@@ -125,9 +125,11 @@
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/js/html.js" />
         <option value="$PROJECT_DIR$/public/html/Login.html" />
-        <option value="$PROJECT_DIR$/API/routes/users.js" />
         <option value="$PROJECT_DIR$/API/middleware/check-auth.js" />
         <option value="$PROJECT_DIR$/API/routes/authentification.js" />
+        <option value="$PROJECT_DIR$/API/routes/users.js" />
+        <option value="$PROJECT_DIR$/API/controllers/connection.js" />
+        <option value="$PROJECT_DIR$/API/routes/cards.js" />
       </list>
     </option>
   </component>
@@ -163,6 +165,12 @@
               <item name="99_Axes" type="b2602c69:ProjectViewProjectNode" />
               <item name="99_Axes" type="462c0819:PsiDirectoryNode" />
               <item name="API" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="99_Axes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="99_Axes" type="462c0819:PsiDirectoryNode" />
+              <item name="API" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="99_Axes" type="b2602c69:ProjectViewProjectNode" />
@@ -309,12 +317,12 @@
       <workItem from="1533193165740" duration="53058000" />
       <workItem from="1533728178955" duration="7725000" />
       <workItem from="1534494695944" duration="9537000" />
-      <workItem from="1534597466529" duration="4328000" />
+      <workItem from="1534597466529" duration="8075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102378000" />
+    <option name="totallyTimeSpent" value="106125000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="855" extended-state="6" />
@@ -389,13 +397,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/html.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -697,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/html/Login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="91" selection-start-line="47" selection-start-column="91" selection-end-line="47" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/html/Card.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1411">
@@ -725,31 +719,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/users.js">
+    <entry file="file://$PROJECT_DIR$/public/html/Login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="624">
+          <caret line="47" column="91" selection-start-line="47" selection-start-column="91" selection-end-line="47" selection-end-column="91" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/API/middleware/check-auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="62" selection-start-line="5" selection-start-column="62" selection-end-line="5" selection-end-column="62" />
+        <state relative-caret-position="17">
+          <caret line="1" column="46" lean-forward="true" selection-start-line="1" selection-start-column="46" selection-end-line="1" selection-end-column="46" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/API/controllers/connection.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/API/routes/authentification.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="94" column="23" selection-start-line="94" selection-start-column="23" selection-end-line="94" selection-end-column="23" />
+        <state relative-caret-position="222">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="32" selection-end-line="99" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/routes/users.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
         </state>
       </provider>
     </entry>

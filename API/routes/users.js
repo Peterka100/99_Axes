@@ -10,7 +10,6 @@ const checkAuth = require('../middleware/check-auth');
 //-----------------------------------------------------------------------------------------------
 router.get('/:user_id', checkAuth, function (req, res) {
     const userID = req.params.user_id;
-    console.log(userID);
    // dbmethods.doconnect();  // připojí se k DB
     var connection = mysql.createConnection({
         host     : 'localhost',
@@ -38,7 +37,6 @@ router.get('/:user_id', checkAuth, function (req, res) {
                     var cardsOfUser = [];
                     for (var i=0; i<pocetRadku; i++) {
                         const cardOfUser = {
-                            user_id: req.params.user_id,
                             card_id: result[i].card_id,
                             card_level: result[i].card_level
                         };

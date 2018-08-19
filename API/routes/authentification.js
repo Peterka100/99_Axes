@@ -83,7 +83,6 @@ router.post("/login", function (req, res, next) {
         if (err) {
             console.log(err);
         } else if (result[0].vysledek < 1) {
-                // console.log('Authorization failed');
                 return res.status(401).json({
                     message: 'Authorization failed'
                 })
@@ -103,10 +102,9 @@ router.post("/login", function (req, res, next) {
                                 {
                                    expiresIn: "1h"
                                 });
-                            //console.log("heslo je OK");
-                            //console.log(result);
                             res.status(200).json({
                                 message: 'Spravne přihlasovací údaje',
+                                user_id: result[0].user_id,
                                 token: token
                             })
                         } else

@@ -1,5 +1,7 @@
-const jwt = require('jsonwebtoken');
 
+// CELY TENTO SUBOR SLOUŽI NA OVEROVANÍ TOKENŮ
+//------------------------------------------------------------------
+const jwt = require('jsonwebtoken');
 
 module.exports = function (req,res, next) {
     try {
