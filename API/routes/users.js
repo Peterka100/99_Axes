@@ -51,5 +51,8 @@ router.get('/:user_id', checkAuth, function (req, res) {
     });
 });
 
+//ADD CARD to USER
+//------------------------------------------
+
 module.exports = router;
 
