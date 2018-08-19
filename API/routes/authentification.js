@@ -83,7 +83,7 @@ router.post("/login", function (req, res, next) {
         if (err) {
             console.log(err);
         } else if (result[0].vysledek < 1) {
-                console.log('Authorization failed');
+                // console.log('Authorization failed');
                 return res.status(401).json({
                     message: 'Authorization failed'
                 })
@@ -91,8 +91,8 @@ router.post("/login", function (req, res, next) {
             console.log('Authorized');
             connection.query("SELECT * FROM users WHERE username =  ?", [user], function(error, result, fields) {
                 if (result[0].password) {
-                    console.log('>>>>>> ', req.body.password);
-                    console.log('>>>>>> ', result[0].password);
+                    // console.log('>>>>>> ', req.body.password);
+                    // console.log('>>>>>> ', result[0].password);
                     bcrypt.compare(req.body.password, result[0].password, function(err, ress) {
                         if (ress) {
                             const token = jwt.sign(
