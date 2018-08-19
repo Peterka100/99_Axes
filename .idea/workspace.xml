@@ -41,11 +41,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cards.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cards.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+            <state relative-caret-position="306">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connection.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/API/controllers/connection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -128,8 +137,8 @@
         <option value="$PROJECT_DIR$/API/middleware/check-auth.js" />
         <option value="$PROJECT_DIR$/API/routes/authentification.js" />
         <option value="$PROJECT_DIR$/API/routes/users.js" />
-        <option value="$PROJECT_DIR$/API/controllers/connection.js" />
         <option value="$PROJECT_DIR$/API/routes/cards.js" />
+        <option value="$PROJECT_DIR$/API/controllers/connection.js" />
       </list>
     </option>
   </component>
@@ -317,15 +326,15 @@
       <workItem from="1533193165740" duration="53058000" />
       <workItem from="1533728178955" duration="7725000" />
       <workItem from="1534494695944" duration="9537000" />
-      <workItem from="1534597466529" duration="8075000" />
+      <workItem from="1534597466529" duration="9908000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106125000" />
+    <option name="totallyTimeSpent" value="107958000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="855" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="855" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -733,9 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/API/controllers/connection.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/API/routes/authentification.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
@@ -752,8 +758,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/API/routes/cards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="306">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/API/controllers/connection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>

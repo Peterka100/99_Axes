@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 
+const ConnectionController = require('../controllers/connection');
 
 // GET localhost:5000/cards/ -->
 
@@ -11,13 +12,13 @@ const mysql = require('mysql');
 //----------------------------------------------------------------------------------
 router.get('/:card_id/:card_level', function (req, res) {
     var connection = mysql.createConnection({
-        host     : 'localhost',
-        user     : 'peter',
-        password : 'peter',
-        database : 'sekera'
+        host: 'localhost',
+        user: 'peter',
+        password: 'peter',
+        database: 'sekera'
     });
 
-    connection.connect(function(err) {
+    connection.connect(function (err) {
         if (err)
             throw err;
         console.log("Connected!");
@@ -45,6 +46,9 @@ router.get('/:card_id/:card_level', function (req, res) {
 
 });
 
+
+// CREATE NEW CARD
+//--------------------------------------------------------
 
 module.exports = router;
 
