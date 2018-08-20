@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const mysql = require('mysql');
 
-const ConnectionController = require('../controllers/connection');
+// const ConnectionController = require('../controllers/connection');
 
 // GET localhost:5000/cards/ -->
 
@@ -49,6 +49,38 @@ router.get('/:card_id/:card_level', function (req, res) {
 
 // CREATE NEW CARD
 //--------------------------------------------------------
+router.post("/insert", function (req, res) {
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'peter',
+        password: 'peter',
+        database: 'sekera'
+    });
+
+    connection.connect(function (err) {
+        if (err)
+            throw err;
+        console.log("Connected!");
+    });
+
+    var newCard = [req.body.user_id, req.body.card_id, req.body.card_level];
+
+
+    console.log(newCard);
+
+    connection.query('INSERT INTO card (user_id, card_id, card_level) VALUES (?)', [newCard] , function (err, result) {
+        if(err) {
+            console.log(err);
+             return res.status(500).json({
+                error: err
+            })
+        } else {
+            res.status(200).json({
+                message: 'data inserted'
+            });
+        }
+    })
+});
 
 module.exports = router;
 
