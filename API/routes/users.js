@@ -52,8 +52,43 @@ router.get('/:user_id', checkAuth, function (req, res) {
     });
 });
 
-//ADD CARD to USER
+//USER resorces
 //------------------------------------------
+
+router.get('/resources/:user_id', function (req, res) {
+    var connection = mysql.createConnection({
+        host: 'localhost',
+        user: 'peter',
+        password: 'peter',
+        database: 'sekera'
+    });
+
+    connection.connect(function (err) {
+        if (err)
+            throw err;
+        console.log("Connected!");
+    });
+
+    console.log(req.params.user_id);
+
+    connection.query('select * from player where user_id = ' + req.params.user_id , function(err, result) {
+        if(err) {
+            console.log(err);
+        } else {
+            var user_resources = {
+                iron: result[0].iron,
+                wood: result[0].wood
+            };
+            res.status(200).json({
+                user_resources: user_resources
+            });
+        }
+
+    });
+
+});
+
+
 
 module.exports = router;
 
