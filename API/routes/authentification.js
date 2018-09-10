@@ -90,8 +90,6 @@ router.post("/login", function (req, res, next) {
             console.log('Authorized');
             connection.query("SELECT * FROM users WHERE username =  ?", [user], function(error, result, fields) {
                 if (result[0].password) {
-                    // console.log('>>>>>> ', req.body.password);
-                    // console.log('>>>>>> ', result[0].password);
                     bcrypt.compare(req.body.password, result[0].password, function(err, ress) {
                         if (ress) {
                             const token = jwt.sign(
@@ -105,7 +103,8 @@ router.post("/login", function (req, res, next) {
                             res.status(200).json({
                                 message: 'Spravne přihlasovací údaje',
                                 user_id: result[0].user_id,
-                                token: token
+                                token: token,
+                                role: result[0].user_role
                             })
                         } else
                             res.status(401).json({
@@ -113,6 +112,7 @@ router.post("/login", function (req, res, next) {
                             })
                     })
                 }
+
             })
 
         }

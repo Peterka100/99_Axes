@@ -52,10 +52,10 @@ router.get('/:user_id', checkAuth, function (req, res) {
     });
 });
 
-//USER resorces
+//USER resources
 //------------------------------------------
 
-router.get('/resources/:user_id', function (req, res) {
+router.get('/resources/:user_id', checkAuth, function (req, res) {
     var connection = mysql.createConnection({
         host: 'localhost',
         user: 'peter',
@@ -77,7 +77,9 @@ router.get('/resources/:user_id', function (req, res) {
         } else {
             var user_resources = {
                 iron: result[0].iron,
-                wood: result[0].wood
+                wood: result[0].wood,
+                meat: result[0].meat,
+                gold: result[0].gold
             };
             res.status(200).json({
                 user_resources: user_resources
